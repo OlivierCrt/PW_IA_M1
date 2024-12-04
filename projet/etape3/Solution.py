@@ -16,7 +16,7 @@ class Solution(ABC) :
         pass
 
     @abstractmethod
-    def unVoisin(self) :
+    def unVoisinListe(self) :
         """  methode recuperant un voisin de la solution courante
         
         :return voisin de la solution courante

@@ -21,8 +21,7 @@ class UneSolution(Solution):
     dep : int
 
     #    constructeurs
-    #    A ECRIRE/COMPLETER
-    #    //////////////////////////////////////////////
+    
     def __init__(self, tg: GrapheDeLieux,depart : int = 0, l_ordre_visite=[]):
         """  constructeur d'une solution a partir du graphe representant le monde
 
@@ -37,7 +36,7 @@ class UneSolution(Solution):
 
     def randomListe(self):
         l = [self.dep]
-        sommets = self.tg.getSommets()
+        sommets = self.tg.getSommets().copy()
         sommets.remove(self.dep)
         while len(sommets)>0:
             indice = random.randint(0,len(sommets)-1)
@@ -48,44 +47,66 @@ class UneSolution(Solution):
 
     #    methodes de la classe abstraite Solution
     #    //////////////////////////////////////////////
-    def lesVoisins(self):
-    
-        out = []
-        temp_out = set()
-
-        n = len(self.ordre_visite)
-        for i in range(1, n - 1):  # On exclut le premier et le dernier sommet
-            sommet = self.ordre_visite[i]
-
-            for j in range(i+1, n - 1):  # On peut insérer entre les positions 1 et n-2
-                if i == j:
-                    continue  # Pas besoin de réinsérer à la même position
-                # Construire une nouvelle solution
-                nouvelle_liste = self.ordre_visite[:i] + self.ordre_visite[i + 1:]
-                nouvelle_liste.insert(j, sommet)
-
-                # Vérifier l'unicité et ajouter la solution
-                tuple_liste = tuple(nouvelle_liste)  # Les listes ne sont pas hashables, convertir en tuple
-                if tuple_liste not in temp_out:
-                    temp_out.add(tuple_liste)
-                    out.append(UneSolution(self.tg, depart=self.dep, l_ordre_visite=nouvelle_liste))
-
-        return out
 
 
-    def unVoisin(self):
+    def unVoisinListe(self):
         """  methode recuperant un voisin de la solution courante
+            sous fonction d 'olivier
 
-        :return voisin de la solution courante
+        :return lvoisin de la solution courante sous forme de liste
         """
-        voisins = self.lesVoisins()
-        indice=0
-        min= voisins[0].eval()
-        for i in range(1,len(voisins)):
-            e = voisins[i].eval()
-            if e < min:
-                indice = i
-        return [voisins[indice]]
+        first_random = random.randint(1, len(self.ordre_visite)-2)
+    
+        while True:
+            second_random = random.randint(1,len(self.ordre_visite) -2)
+            if second_random != first_random:
+                break
+
+
+        if (first_random > second_random) :
+            temp = first_random
+            first_random = second_random
+            second_random = temp
+
+        gogo = self.ordre_visite.copy()
+
+        gogo[first_random:second_random] = gogo[first_random:second_random][::-1]
+
+        return gogo
+    
+
+
+
+    def unVoisin(self) :
+        voisin_liste = self.unVoisinListe() 
+        return UneSolution(self.tg, self.dep, voisin_liste)
+
+    def lesVoisins(self):
+        nbvoisins = self.tg.getNbSommets() //2
+
+        liste_ordre =[]
+        actuel =self.unVoisinListe()
+        k=UneSolution(self.tg, self.dep,actuel)
+
+        for i in range (nbvoisins):
+            if k not in liste_ordre :
+                liste_ordre.append(k)
+            
+            actuel=k.unVoisinListe()
+            k =UneSolution(self.tg, self.dep,actuel)
+        return liste_ordre
+
+
+        
+
+
+        
+    
+        
+
+
+    
+        
 
     def eval(self):
         """  methode recuperant la valeur de la solution courante
@@ -131,7 +152,7 @@ class UneSolution(Solution):
         :return code de hachage
         """
         #    A ECRIRE et MODIFIER le return en consequence
-        return 0
+        return hash(tuple(self.ordre_visite))
 
     def __eq__(self, o):
         """  methode de comparaison de la solution courante avec l'objet o
@@ -145,12 +166,12 @@ class UneSolution(Solution):
         if len(self.ordre_visite) != len(o.ordre_visite):
             return False
 
-        constante = True
+        m = True
         for i in range(len(self.ordre_visite)):
             if self.ordre_visite[i] != o.ordre_visite[i]:
-                constante = False
+                m = False
 
-        return constante
+        return m
 
         #    methode pour affichage futur (heritee d'Object)
 
@@ -166,3 +187,15 @@ class UneSolution(Solution):
             s += str(e) + "-"
         s += " avec un score de :" + str(self.eval()) + "\n"
         return s
+
+
+
+
+
+tg = GrapheDeLieux.loadGraph("Data/town10.txt",True)
+tsp = UneSolution(tg)
+l = tsp.lesVoisins()
+print("Initial:",tsp.ordre_visite)
+for i in l :
+    print(i.ordre_visite)
+
