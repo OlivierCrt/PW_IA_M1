@@ -3,6 +3,8 @@ import random
 
 from projet.outils.GrapheDeLieux import GrapheDeLieux
 from projet.etape3.Solution import Solution
+from projet.solvers.SolverTabou import SolverTabou  #a enlever juste pour montrer a la prof
+
 
 
 class UneSolution(Solution):
@@ -50,10 +52,10 @@ class UneSolution(Solution):
 
 
     def unVoisinListe(self):
-        """  methode recuperant un voisin de la solution courante
+        """  
             sous fonction d 'olivier
 
-        :return lvoisin de la solution courante sous forme de liste
+        :return voisin de la solution courante sous forme de liste
         """
         first_random = random.randint(1, len(self.ordre_visite)-2)
     
@@ -80,6 +82,9 @@ class UneSolution(Solution):
     def unVoisin(self) :
         voisin_liste = self.unVoisinListe() 
         return UneSolution(self.tg, self.dep, voisin_liste)
+
+
+
 
     def lesVoisins(self):
         nbvoisins = self.tg.getNbSommets() //2
@@ -191,11 +196,15 @@ class UneSolution(Solution):
 
 
 
-
-tg = GrapheDeLieux.loadGraph("Data/town10.txt",True)
+"""
+tg = GrapheDeLieux.loadGraph("Data/town150.txt",True)
 tsp = UneSolution(tg)
 l = tsp.lesVoisins()
 print("Initial:",tsp.ordre_visite)
 for i in l :
     print(i.ordre_visite)
 
+
+SolverTabou.tabou(tsp,10)
+
+"""

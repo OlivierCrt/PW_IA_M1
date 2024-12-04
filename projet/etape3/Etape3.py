@@ -26,10 +26,10 @@ class Etape3 :
         SolverTabou.tabou(tsp,N)
 
         print("======== Solver 2 pour 10 villes de 0 a 9 : \n")
-        #SolverHC.hilClimbing2(tsp,N)
+        SolverHC.hilClimbing2(tsp,N)
 
         print("======== Solver 3 pour 10 villes de 0 a 9 : \n")
-        #SolverHC.hilClimbing(tsp, N)
+        SolverHC.hilClimbing(tsp, N)
 
 
         #    ///////////////////
@@ -43,7 +43,7 @@ class Etape3 :
         SolverHC.hilClimbing2(tsp,N)
 
         print("======== Solver 3 pour 26 villes de 0 a 25 : \n")
-        #SolverHC.hilClimbing(tsp, N)
+        SolverHC.hilClimbing(tsp, N)
 
 
         #    ///////////////////
@@ -54,10 +54,10 @@ class Etape3 :
         SolverTabou.tabou(tsp,N)
 
         print("======== Solver 2 pour 150 villes : \n")
-        #SolverHC.hilClimbing2(tsp,N)
+        SolverHC.hilClimbing2(tsp,N)
 
         print("======== Solver 3 pour 150 villes: \n")
-        #SolverHC.hilClimbing(tsp, N)
+        SolverHC.hilClimbing(tsp, N)
 
 
         #    ///////////////////
