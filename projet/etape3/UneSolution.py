@@ -81,7 +81,8 @@ class UneSolution(Solution):
 
     def unVoisin(self) :
         voisin_liste = self.unVoisinListe() 
-        return UneSolution(self.tg, self.dep, voisin_liste)
+        return [UneSolution(self.tg, self.dep, voisin_liste)]
+        
 
 
 
@@ -92,12 +93,16 @@ class UneSolution(Solution):
         liste_ordre =[]
         actuel =self.unVoisinListe()
         k=UneSolution(self.tg, self.dep,actuel)
+        visite=[]
+        visite.append(actuel)
 
         for i in range (nbvoisins):
             if k not in liste_ordre :
                 liste_ordre.append(k)
             
-            actuel=k.unVoisinListe()
+            
+            actuel = self.unVoisinListe()
+               
             k =UneSolution(self.tg, self.dep,actuel)
         return liste_ordre
 
@@ -174,7 +179,10 @@ class UneSolution(Solution):
         m = True
         for i in range(len(self.ordre_visite)):
             if self.ordre_visite[i] != o.ordre_visite[i]:
-                m = False
+                m = False  #MCL: ICI je rajouterais un break car 
+                #MCL: des qu il y a un indice pour lequel les valeurs 
+                #MCL: ne correspondent pas on sait que c est faux et 
+                #MCL: c est inutile de continuer a verifier
 
         return m
 

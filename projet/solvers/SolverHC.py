@@ -34,7 +34,7 @@ class SolverHC :
           while (flag) :
             SolverHC.__nbSolutionsExplores__ = SolverHC.__nbSolutionsExplores__ + 1
             flag = False
-            v : Solution = e.unVoisin()
+            v : Solution = e.unVoisin()[0]
             if (v.eval() < e.eval()) :
                 #    on ameliore
                 e = v 
@@ -73,7 +73,7 @@ class SolverHC :
                 
                 SolverHC.__nbSolutionsExplores__ = SolverHC.__nbSolutionsExplores__ +1
                 flag = False
-                v : Solution = e.unVoisin()
+                v : Solution = e.unVoisin()[0]
                 if (v.eval() < e.eval()) :
                     e = v 
                     flag = True
@@ -81,7 +81,7 @@ class SolverHC :
             for i in range(0, nbEssai) :
                 
                 SolverHC.__nbSolutionsExplores__ =  SolverHC.__nbSolutionsExplores__ + 1
-                v : Solution= e.unVoisin()
+                v : Solution= e.unVoisin()[0]
                 if (v.eval() < e.eval()) :
                     e = v 
         
