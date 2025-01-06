@@ -22,3 +22,9 @@ read problem <projet/etape5/town18.zpl>
 
 base directory for ZIMPL parsing: </home/python/TP_IA_Olivier_Crampette/projet/etape5>
 
+original problem has 153 variables (153 bin, 0 int, 0 impl, 0 cont) and 261818 constraints
+
+solve problem
+=============
+
+presolving:

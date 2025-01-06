@@ -16,21 +16,14 @@ External libraries:
 
 user parameter file <scip.set> not found - using default parameters
 
-read problem <projet/etape5/town17.zpl>
+read problem <projet/etape5/town19.zpl>
 ============
 
 
 base directory for ZIMPL parsing: </home/python/TP_IA_Olivier_Crampette/projet/etape5>
 
-original problem has 136 variables (136 bin, 0 int, 0 impl, 0 cont) and 130781 constraints
+original problem has 171 variables (171 bin, 0 int, 0 impl, 0 cont) and 523925 constraints
 
 solve problem
 =============
 
-presolving:
-   (8.8s) running MILP presolver
-   (12.3s) MILP presolver found nothing
-(round 1, exhaustive) 0 del vars, 0 del conss, 0 add conss, 0 chg bounds, 0 chg sides, 0 chg coeffs, 130764 upgd conss, 0 impls, 0 clqs
-   (22.8s) probing: 51/136 (37.5%) - 0 fixings, 0 aggregations, 0 implications, 0 bound changes
-   (22.9s) probing aborted: 50/50 successive totally useless probings
-   (23.3s) symmetry computation started: requiring (bin +, int +, cont +), (fixed: bin -, int -, cont -)
