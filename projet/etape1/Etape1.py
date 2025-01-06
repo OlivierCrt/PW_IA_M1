@@ -33,6 +33,8 @@ class Etape1 :
     # //////////////////////////////////////////////
     def __init__ (self, fn : str, form : bool) :
         """
+        constructeur
+
         :param fn: le nom du fichier dans lequel sont donnes les sommets et les aretes
 
         :param form: permet de distinguer entre les differents types de fichier
@@ -40,7 +42,6 @@ class Etape1 :
           pour les autres, form est False)
         """
         self.g = GrapheDeLieux.loadGraph(fn,form)
-
         self.base = []
         self.nbVariables = 0
 
@@ -51,11 +52,36 @@ class Etape1 :
         methode de maj de la base de clauses et du nb de variables en fonction du pb traite
 
         :param x: parametre servant pour definir la base qui representera le probleme
+
         """
-        # A ECRIRE par les etudiants en utilisant le contenu de g
-        # ajout possible de parametre => modifier aussi l'appel ds le main
-        self.base = [[-1, 2], [-1, -2]]  # a maj
-        self.nbVariables = 2             # a maj
+
+        self.base = []
+        self.nbVariables = len(self.g.getSommets()) * x
+
+        # Pour chaque sommet
+        for sommet in self.g.getSommets():
+            # creer vars pour les k couleurs du sommet
+            varCool = []
+            for i in range (x):
+              varCool.append(sommet * x + i + 1)
+
+
+
+            # Au moins une couleur
+            self.base.append(varCool)
+
+            # Couleur Unique
+            for i in range(x):
+                for j in range(i + 1, x):
+                    self.base.append([-varCool[i], -varCool[j]])
+
+        # Adjacence
+        for sommet in self.g.getSommets():
+          voisins = self.g.getAdjacents(sommet)
+          for voisin in voisins:
+              if voisin > sommet:  # doublons out
+                  for i in range(x):
+                      self.base.append([-(sommet * x + i + 1), -(voisin * x + i + 1)])
 
 
     def execSolver(self) :
@@ -86,7 +112,7 @@ class __testEtape1__ :
 
         # TEST 1 : town10.txt avec 3 couleurs
         print("Test sur fichier town10.txt avec 3 couleurs") ;
-        e = Etape1("/home/python/TP_IA_Olivier_Crampette/Data/town10.txt",True) ;
+        e = Etape1("Data/town10.txt",True) ;
         e.majBase(3) ;
         e.affBase() ;
         print("Resultat obtenu (on attend True) :",e.execSolver()) ;
@@ -145,4 +171,3 @@ class __testEtape1__ :
         e.majBase(3) ;
         # e.affBase() ;
         print("Resultat obtenu (on attend False) :",e.execSolver()) ;
-

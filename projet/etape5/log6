@@ -40,15 +40,15 @@ presolving (2 rounds: 2 fast, 2 medium, 2 exhaustive):
 presolved problem has 15 variables (15 bin, 0 int, 0 impl, 0 cont) and 26 constraints
       6 constraints of type <linear>
      20 constraints of type <logicor>
-Presolving Time: 0.02
+Presolving Time: 0.01
 
  time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
-p 0.1s|     1 |     0 |     0 |     - |   locks|   0 |  15 |  26 |  26 |   0 |  0 |   0 |   0 | 0.000000e+00 | 2.108928e+03 |    Inf | unknown
-* 0.1s|     1 |     0 |    10 |     - |    LP  |   0 |  15 |  26 |  26 |   0 |  0 |   0 |   0 | 1.360650e+03 | 1.360650e+03 |   0.00%| unknown
-  0.1s|     1 |     0 |    10 |     - |   786k |   0 |  15 |  26 |  26 |   0 |  0 |   0 |   0 | 1.360650e+03 | 1.360650e+03 |   0.00%| unknown
+p 0.0s|     1 |     0 |     0 |     - |   locks|   0 |  15 |  26 |  26 |   0 |  0 |   0 |   0 | 0.000000e+00 | 2.108928e+03 |    Inf | unknown
+* 0.0s|     1 |     0 |    10 |     - |    LP  |   0 |  15 |  26 |  26 |   0 |  0 |   0 |   0 | 1.360650e+03 | 1.360650e+03 |   0.00%| unknown
+  0.0s|     1 |     0 |    10 |     - |   786k |   0 |  15 |  26 |  26 |   0 |  0 |   0 |   0 | 1.360650e+03 | 1.360650e+03 |   0.00%| unknown
 
 SCIP Status        : problem is solved [optimal solution found]
-Solving Time (sec) : 0.05
+Solving Time (sec) : 0.03
 Solving Nodes      : 1
 Primal Bound       : +1.36064959555608e+03 (2 solutions)
 Dual Bound         : +1.36064959555608e+03
@@ -69,10 +69,10 @@ Statistics
 ==========
 
 SCIP Status        : problem is solved [optimal solution found]
-Total Time         :       0.07
-  solving          :       0.05
-  presolving       :       0.02 (included in solving)
-  reading          :       0.02
+Total Time         :       0.04
+  solving          :       0.03
+  presolving       :       0.01 (included in solving)
+  reading          :       0.01
   copying          :       0.00 (0 times copied the problem)
 Original Problem   :
   Problem name     : town6.zpl
@@ -96,7 +96,7 @@ Presolvers         :   ExecTime  SetupTime  Calls  FixedVars   AggrVars   ChgTyp
   gateextraction   :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
   implics          :       0.00       0.00      2          0          0          0          0          0          0          0          0          0
   inttobinary      :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
-  milp             :       0.02       0.00      1          0          0          0          0          0          0          0          0          0
+  milp             :       0.01       0.00      1          0          0          0          0          0          0          0          0          0
   qpkktref         :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
   redvub           :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
   sparsify         :       0.00       0.00      1          0          0          0          0          0          0          0          0          0
@@ -321,20 +321,20 @@ B&B Tree           :
   switching time   :       0.00
 Root Node          :
   First LP value   : +1.36064959555608e+03
-  First LP Iters   :         10 (32467.53 Iter/sec)
+  First LP Iters   :         10 (14925.37 Iter/sec)
   First LP Time    :       0.00
   Final Dual Bound :          -
   Final Root Iters :         10
   Root LP Estimate :                     -
 Solution           :
   Solutions found  :          2 (2 improvements)
-  First Solution   : +2.10892834181167e+03   (in run 1, after 1 nodes, 0.04 seconds, depth 9, found by <locks>)
+  First Solution   : +2.10892834181167e+03   (in run 1, after 1 nodes, 0.03 seconds, depth 9, found by <locks>)
   Gap First Sol.   :   infinite
   Gap Last Sol.    :       0.00 %
-  Primal Bound     : +1.36064959555608e+03   (in run 1, after 1 nodes, 0.05 seconds, depth 0, found by <relaxation>)
+  Primal Bound     : +1.36064959555608e+03   (in run 1, after 1 nodes, 0.03 seconds, depth 0, found by <relaxation>)
   Dual Bound       : +1.36064959555608e+03
   Gap              :       0.00 %
 Integrals          :      Total       Avg%
-  primal-dual      :       5.08      99.80
+  primal-dual      :       3.37      99.61
   primal-ref       :          -          - (not evaluated)
   dual-ref         :          -          - (not evaluated)

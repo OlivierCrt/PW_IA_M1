@@ -1,0 +1,492 @@
+Test sur fichier town10.txt avec 3 couleurs
+10
+Base de clause utilise  30  variables et contient les clauses suivantes : 
+[1, 2, 3]
+[-1, -2]
+[-1, -3]
+[-2, -3]
+[4, 5, 6]
+[-4, -5]
+[-4, -6]
+[-5, -6]
+[7, 8, 9]
+[-7, -8]
+[-7, -9]
+[-8, -9]
+[10, 11, 12]
+[-10, -11]
+[-10, -12]
+[-11, -12]
+[13, 14, 15]
+[-13, -14]
+[-13, -15]
+[-14, -15]
+[16, 17, 18]
+[-16, -17]
+[-16, -18]
+[-17, -18]
+[19, 20, 21]
+[-19, -20]
+[-19, -21]
+[-20, -21]
+[22, 23, 24]
+[-22, -23]
+[-22, -24]
+[-23, -24]
+[25, 26, 27]
+[-25, -26]
+[-25, -27]
+[-26, -27]
+[28, 29, 30]
+[-28, -29]
+[-28, -30]
+[-29, -30]
+[-1, -4]
+[-2, -5]
+[-3, -6]
+[-1, -7]
+[-2, -8]
+[-3, -9]
+[-4, -10]
+[-5, -11]
+[-6, -12]
+[-4, -13]
+[-5, -14]
+[-6, -15]
+[-7, -10]
+[-8, -11]
+[-9, -12]
+[-7, -16]
+[-8, -17]
+[-9, -18]
+[-10, -13]
+[-11, -14]
+[-12, -15]
+[-10, -19]
+[-11, -20]
+[-12, -21]
+[-13, -16]
+[-14, -17]
+[-15, -18]
+[-13, -25]
+[-14, -26]
+[-15, -27]
+[-16, -19]
+[-17, -20]
+[-18, -21]
+[-19, -22]
+[-20, -23]
+[-21, -24]
+[-19, -25]
+[-20, -26]
+[-21, -27]
+[-22, -25]
+[-23, -26]
+[-24, -27]
+[-22, -28]
+[-23, -29]
+[-24, -30]
+[-25, -28]
+[-26, -29]
+[-27, -30]
+Resultat obtenu (on attend True) : True
+Test sur fichier town10.txt avec 2 couleurs
+Base de clause utilise  20  variables et contient les clauses suivantes : 
+[1, 2]
+[-1, -2]
+[3, 4]
+[-3, -4]
+[5, 6]
+[-5, -6]
+[7, 8]
+[-7, -8]
+[9, 10]
+[-9, -10]
+[11, 12]
+[-11, -12]
+[13, 14]
+[-13, -14]
+[15, 16]
+[-15, -16]
+[17, 18]
+[-17, -18]
+[19, 20]
+[-19, -20]
+[-1, -3]
+[-2, -4]
+[-1, -5]
+[-2, -6]
+[-3, -7]
+[-4, -8]
+[-3, -9]
+[-4, -10]
+[-5, -7]
+[-6, -8]
+[-5, -11]
+[-6, -12]
+[-7, -9]
+[-8, -10]
+[-7, -13]
+[-8, -14]
+[-9, -11]
+[-10, -12]
+[-9, -17]
+[-10, -18]
+[-11, -13]
+[-12, -14]
+[-13, -15]
+[-14, -16]
+[-13, -17]
+[-14, -18]
+[-15, -17]
+[-16, -18]
+[-15, -19]
+[-16, -20]
+[-17, -19]
+[-18, -20]
+Resultat obtenu (on attend False) : False
+Test sur fichier town10.txt avec 4 couleurs
+Base de clause utilise  40  variables et contient les clauses suivantes : 
+[1, 2, 3, 4]
+[-1, -2]
+[-1, -3]
+[-1, -4]
+[-2, -3]
+[-2, -4]
+[-3, -4]
+[5, 6, 7, 8]
+[-5, -6]
+[-5, -7]
+[-5, -8]
+[-6, -7]
+[-6, -8]
+[-7, -8]
+[9, 10, 11, 12]
+[-9, -10]
+[-9, -11]
+[-9, -12]
+[-10, -11]
+[-10, -12]
+[-11, -12]
+[13, 14, 15, 16]
+[-13, -14]
+[-13, -15]
+[-13, -16]
+[-14, -15]
+[-14, -16]
+[-15, -16]
+[17, 18, 19, 20]
+[-17, -18]
+[-17, -19]
+[-17, -20]
+[-18, -19]
+[-18, -20]
+[-19, -20]
+[21, 22, 23, 24]
+[-21, -22]
+[-21, -23]
+[-21, -24]
+[-22, -23]
+[-22, -24]
+[-23, -24]
+[25, 26, 27, 28]
+[-25, -26]
+[-25, -27]
+[-25, -28]
+[-26, -27]
+[-26, -28]
+[-27, -28]
+[29, 30, 31, 32]
+[-29, -30]
+[-29, -31]
+[-29, -32]
+[-30, -31]
+[-30, -32]
+[-31, -32]
+[33, 34, 35, 36]
+[-33, -34]
+[-33, -35]
+[-33, -36]
+[-34, -35]
+[-34, -36]
+[-35, -36]
+[37, 38, 39, 40]
+[-37, -38]
+[-37, -39]
+[-37, -40]
+[-38, -39]
+[-38, -40]
+[-39, -40]
+[-1, -5]
+[-2, -6]
+[-3, -7]
+[-4, -8]
+[-1, -9]
+[-2, -10]
+[-3, -11]
+[-4, -12]
+[-5, -13]
+[-6, -14]
+[-7, -15]
+[-8, -16]
+[-5, -17]
+[-6, -18]
+[-7, -19]
+[-8, -20]
+[-9, -13]
+[-10, -14]
+[-11, -15]
+[-12, -16]
+[-9, -21]
+[-10, -22]
+[-11, -23]
+[-12, -24]
+[-13, -17]
+[-14, -18]
+[-15, -19]
+[-16, -20]
+[-13, -25]
+[-14, -26]
+[-15, -27]
+[-16, -28]
+[-17, -21]
+[-18, -22]
+[-19, -23]
+[-20, -24]
+[-17, -33]
+[-18, -34]
+[-19, -35]
+[-20, -36]
+[-21, -25]
+[-22, -26]
+[-23, -27]
+[-24, -28]
+[-25, -29]
+[-26, -30]
+[-27, -31]
+[-28, -32]
+[-25, -33]
+[-26, -34]
+[-27, -35]
+[-28, -36]
+[-29, -33]
+[-30, -34]
+[-31, -35]
+[-32, -36]
+[-29, -37]
+[-30, -38]
+[-31, -39]
+[-32, -40]
+[-33, -37]
+[-34, -38]
+[-35, -39]
+[-36, -40]
+Resultat obtenu (on attend True) : True
+Test sur fichier flat20_3_0.col avec 4 couleurs
+20
+Resultat obtenu (on attend True) : True
+Test sur fichier flat20_3_0.col avec 3 couleurs
+Resultat obtenu (on attend True) : True
+Test sur fichier flat20_3_0.col avec 2 couleurs
+Resultat obtenu (on attend False) : False
+Test sur fichier jean.col avec 10 couleurs
+80
+Resultat obtenu (on attend True) : True
+Test sur fichier jean.col avec 9 couleurs
+Resultat obtenu (on attend False) : False
+Test sur fichier jean.col avec 3 couleurs
+Resultat obtenu (on attend False) : False
+10
+======== TEST CAS 1 10 villes de 0 a 9 : 
+
+Chemin trouvé : 0 -> 1 -> 4 -> 8 -> 9
+Longueur totale du chemin : 1190.971503412202
+la lg du plus court chemin est  1190.971503412202
+EtatCas1(position=9, target=9)
+=======(nb d'etats explores = 7)========
+=======(nb d'etats generes = 21)========
+
+Solution trouvée :  EtatCas1(position=9, target=9)
+======== TEST CAS 1 10 villes de 5 a 9 : 
+
+Chemin trouvé : 5 -> 6 -> 8 -> 9
+Longueur totale du chemin : 858.6177055898913
+la lg du plus court chemin est  858.6177055898913
+EtatCas1(position=9, target=9)
+=======(nb d'etats explores = 5)========
+=======(nb d'etats generes = 16)========
+
+Solution trouvée :  EtatCas1(position=9, target=9)
+======== TEST CAS 1 10 villes de 2 a 9 : 
+
+Chemin trouvé : 2 -> 3 -> 6 -> 8 -> 9
+Longueur totale du chemin : 1090.639192762493
+la lg du plus court chemin est  1090.639192762493
+EtatCas1(position=9, target=9)
+=======(nb d'etats explores = 10)========
+=======(nb d'etats generes = 31)========
+
+Solution trouvée :  EtatCas1(position=9, target=9)
+======== TEST CAS 1 10 villes de 1 a 7 : 
+
+Chemin trouvé : 1 -> 3 -> 6 -> 7
+Longueur totale du chemin : 889.1949043390725
+la lg du plus court chemin est  889.1949043390727
+EtatCas1(position=7, target=7)
+=======(nb d'etats explores = 5)========
+=======(nb d'etats generes = 14)========
+
+Solution trouvée :  EtatCas1(position=7, target=7)
+26
+======== TEST CAS 1 26 villes de 0 a 25 : 
+
+Chemin trouvé : 0 -> 3 -> 5 -> 12 -> 16 -> 19 -> 24 -> 25
+Longueur totale du chemin : 1856.5
+la lg du plus court chemin est  1856.5
+EtatCas1(position=25, target=25)
+=======(nb d'etats explores = 20)========
+=======(nb d'etats generes = 76)========
+
+Solution trouvée :  EtatCas1(position=25, target=25)
+146
+======== TEST CAS 1 146 villes de 0 a 145 : 
+
+Chemin trouvé : 0 -> 5 -> 45 -> 69 -> 89 -> 111 -> 133 -> 145
+Longueur totale du chemin : 1143.0
+la lg du plus court chemin est  1143.0000000000002
+EtatCas1(position=145, target=145)
+=======(nb d'etats explores = 150)========
+=======(nb d'etats generes = 1327)========
+
+Solution trouvée :  EtatCas1(position=145, target=145)
+998
+======== TEST CAS 1 1000 villes : 
+
+Chemin trouvé : 0 -> 126 -> 261 -> 386 -> 646 -> 829 -> 964 -> 997
+Longueur totale du chemin : 726.7000000000002
+la lg du plus court chemin est  726.7
+EtatCas1(position=997, target=997)
+=======(nb d'etats explores = 1000)========
+=======(nb d'etats generes = 44862)========
+
+Solution trouvée :  EtatCas1(position=997, target=997)
+10
+======== TEST CAS 2 10 villes de 0 a 9 : 
+
+Chemin trouvé : 0 , 1 , 3 , 4 , 8 , 9 , 7 , 6 , 5 , 2 , 0
+Longueur totale: 3792.1903620071935
+la lg du plus court chemin est  3792.190362007193
+EtatCas2(position=0, a_visiter=[])
+=======(nb d'etats explores = 238)========
+=======(nb d'etats generes = 274)========
+
+Solution trouvée :  EtatCas2(position=0, a_visiter=[])
+6
+======== TEST CAS 3 6 villes de 0 a 5 : 
+
+Chemin trouvé : 0 , 1 , 2 , 3 , 5 , 4 , 0
+Longueur totale: 0
+la lg du plus court chemin est  1360.6495955560758
+EtatCas3(position=0, a_visiter=[])
+=======(nb d'etats explores = 82)========
+=======(nb d'etats generes = 171)========
+
+Solution trouvée :  EtatCas3(position=0, a_visiter=[])
+7
+======== TEST CAS 3 7 villes de 0 a 6 : 
+
+Chemin trouvé : 0 , 1 , 2 , 3 , 6 , 5 , 4 , 0
+Longueur totale: 0
+la lg du plus court chemin est  1638.459980067224
+EtatCas3(position=0, a_visiter=[])
+=======(nb d'etats explores = 194)========
+=======(nb d'etats generes = 493)========
+
+Solution trouvée :  EtatCas3(position=0, a_visiter=[])
+8
+======== TEST CAS 3 8 villes de 0 a 7 : 
+
+Chemin trouvé : 0 , 4 , 5 , 7 , 6 , 3 , 2 , 1 , 0
+Longueur totale: 0
+la lg du plus court chemin est  1729.6228205017967
+EtatCas3(position=0, a_visiter=[])
+=======(nb d'etats explores = 450)========
+=======(nb d'etats generes = 1359)========
+
+Solution trouvée :  EtatCas3(position=0, a_visiter=[])
+9
+======== TEST CAS 3 9 villes de 0 a 8 : 
+
+Chemin trouvé : 0 , 1 , 2 , 3 , 6 , 7 , 5 , 8 , 4 , 0
+Longueur totale: 0
+la lg du plus court chemin est  1855.2162397331167
+EtatCas3(position=0, a_visiter=[])
+=======(nb d'etats explores = 1026)========
+=======(nb d'etats generes = 3601)========
+
+Solution trouvée :  EtatCas3(position=0, a_visiter=[])
+10
+======== TEST CAS 3 10 villes de 0 a 9 : 
+
+Chemin trouvé : 0 , 1 , 2 , 3 , 6 , 7 , 5 , 8 , 9 , 4 , 0
+Longueur totale: 1140.1716718008242
+la lg du plus court chemin est  2026.2675322208256
+EtatCas3(position=0, a_visiter=[])
+=======(nb d'etats explores = 2306)========
+=======(nb d'etats generes = 9235)========
+
+Solution trouvée :  EtatCas3(position=0, a_visiter=[])
+11
+======== TEST CAS 3 11 villes de 0 a 10 : 
+
+Chemin trouvé : 0 , 2 , 10 , 6 , 9 , 3 , 4 , 7 , 1 , 8 , 5 , 0
+Longueur totale: 0
+la lg du plus court chemin est  2204.349308729841
+EtatCas3(position=0, a_visiter=[])
+=======(nb d'etats explores = 5161)========
+=======(nb d'etats generes = 23181)========
+
+Solution trouvée :  EtatCas3(position=0, a_visiter=[])
+10
+======== Solver 1 pour 10 villes de 0 a 9 : 
+
+	 Il y a 5 tabou(s) :
+
+La meilleure solution obtenue : 0-1-2-3-4-9-8-7-6-5-0- avec un score de :2348.8418460764397
+=======(arret apres 10 essais : nb d'etats explores = 10)========
+
+	 Il y a 60 tabou(s) :
+
+La meilleure solution obtenue : 0-1-2-3-6-7-8-9-4-5-0- avec un score de :2322.2108748201263
+=======(arret apres 100 essais : nb d'etats explores = 110)========
+
+======== Solver 2 pour 10 villes de 0 a 9 : 
+
+HC avec plusieurs essais et tirage aleatoire d'une nelle solution pour chaque essai
+
+La meilleure solution obtenue : 0-1-4-2-3-7-9-8-5-6-0- avec un score de :2742.2402362684516
+=======(arret apres 10 essais : nb d'etats explores = 20)========
+
+HC avec plusieurs essais et tirage aleatoire d'une nelle solution pour chaque essai
+
+La meilleure solution obtenue : 0-1-4-8-9-6-7-5-2-3-0- avec un score de :2430.051431573405
+=======(arret apres 100 essais : nb d'etats explores = 155)========
+
+26
+======== Solver 1 pour 26 villes de 0 a 25 : 
+
+	 Il y a 53 tabou(s) :
+
+La meilleure solution obtenue : 0-2-5-15-14-22-23-21-25-24-18-11-12-10-7-3-1-8-4-6-9-16-13-17-20-19-0- avec un score de :3327.5145388903575
+=======(arret apres 100 essais : nb d'etats explores = 210)========
+
+======== Solver 2 pour 26 villes de 0 a 25 : 
+
+HC avec plusieurs essais et tirage aleatoire d'une nelle solution pour chaque essai
+
+La meilleure solution obtenue : 0-3-19-6-17-8-24-21-25-22-14-15-2-10-5-7-16-23-9-4-13-20-18-12-11-1-0- avec un score de :6166.137111469927
+=======(arret apres 100 essais : nb d'etats explores = 178)========
+
+146
+======== Solver 1 pour 150 villes : 
+

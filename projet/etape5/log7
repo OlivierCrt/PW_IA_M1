@@ -41,7 +41,7 @@ presolved problem has 21 variables (21 bin, 0 int, 0 impl, 0 cont) and 77 constr
      35 constraints of type <knapsack>
       7 constraints of type <linear>
      35 constraints of type <logicor>
-Presolving Time: 0.03
+Presolving Time: 0.00
 
  time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
 p 0.0s|     1 |     0 |     0 |     - |shiftand|   0 |  21 |  77 |  77 |   0 |  0 |   2 |   0 | 0.000000e+00 | 2.720931e+03 |    Inf | unknown
@@ -49,7 +49,7 @@ p 0.0s|     1 |     0 |     0 |     - |shiftand|   0 |  21 |  77 |  77 |   0 |  
   0.0s|     1 |     0 |    11 |     - |  1104k |   0 |  21 |  77 |  77 |   0 |  0 |   2 |   0 | 1.638460e+03 | 1.638460e+03 |   0.00%| unknown
 
 SCIP Status        : problem is solved [optimal solution found]
-Solving Time (sec) : 0.04
+Solving Time (sec) : 0.01
 Solving Nodes      : 1
 Primal Bound       : +1.63845998006722e+03 (2 solutions)
 Dual Bound         : +1.63845998006722e+03
@@ -71,10 +71,10 @@ Statistics
 ==========
 
 SCIP Status        : problem is solved [optimal solution found]
-Total Time         :       0.06
-  solving          :       0.04
-  presolving       :       0.03 (included in solving)
-  reading          :       0.02
+Total Time         :       0.02
+  solving          :       0.01
+  presolving       :       0.00 (included in solving)
+  reading          :       0.01
   copying          :       0.00 (0 times copied the problem)
 Original Problem   :
   Problem name     : town7.zpl
@@ -107,7 +107,7 @@ Presolvers         :   ExecTime  SetupTime  Calls  FixedVars   AggrVars   ChgTyp
   tworowbnd        :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
   dualfix          :       0.00       0.00      2          0          0          0          0          0          0          0          0          0
   genvbounds       :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
-  probing          :       0.03       0.00      1          0          0          0          0          0          0          0          0          0
+  probing          :       0.00       0.00      1          0          0          0          0          0          0          0          0          0
   pseudoobj        :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
   symmetry         :       0.00       0.00      1          0          0          0          0          0          0          0          0          0
   vbounds          :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
@@ -136,7 +136,7 @@ Constraint Timings :  TotalTime  SetupTime   Separate  Propagate     EnfoLP     
   benders          :       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00
   fixedvar         :       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00
   countsols        :       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00
-  components       :       0.02       0.00       0.00       0.02       0.00       0.00       0.00       0.00       0.00       0.00
+  components       :       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00
 Propagators        : #Propagate   #ResProp    Cutoffs    DomReds
   dualfix          :          2          0          0          0
   genvbounds       :          0          0          0          0
@@ -153,7 +153,7 @@ Propagator Timings :  TotalTime  SetupTime   Presolve  Propagate    ResProp    S
   genvbounds       :       0.00       0.00       0.00       0.00       0.00       0.00
   nlobbt           :       0.00       0.00       0.00       0.00       0.00       0.00
   obbt             :       0.00       0.00       0.00       0.00       0.00       0.00
-  probing          :       0.03       0.00       0.03       0.00       0.00       0.00
+  probing          :       0.00       0.00       0.00       0.00       0.00       0.00
   pseudoobj        :       0.00       0.00       0.00       0.00       0.00       0.00
   redcost          :       0.00       0.00       0.00       0.00       0.00       0.00
   rootredcost      :       0.00       0.00       0.00       0.00       0.00       0.00
@@ -326,20 +326,20 @@ B&B Tree           :
   switching time   :       0.00
 Root Node          :
   First LP value   : +1.63845998006722e+03
-  First LP Iters   :         11 (28350.52 Iter/sec)
+  First LP Iters   :         11 (45833.33 Iter/sec)
   First LP Time    :       0.00
   Final Dual Bound :          -
   Final Root Iters :         11
   Root LP Estimate :                     -
 Solution           :
   Solutions found  :          2 (2 improvements)
-  First Solution   : +2.72093083033755e+03   (in run 1, after 1 nodes, 0.03 seconds, depth 12, found by <shiftandpropagate>)
+  First Solution   : +2.72093083033755e+03   (in run 1, after 1 nodes, 0.01 seconds, depth 12, found by <shiftandpropagate>)
   Gap First Sol.   :   infinite
   Gap Last Sol.    :       0.00 %
-  Primal Bound     : +1.63845998006722e+03   (in run 1, after 1 nodes, 0.04 seconds, depth 0, found by <relaxation>)
+  Primal Bound     : +1.63845998006722e+03   (in run 1, after 1 nodes, 0.01 seconds, depth 0, found by <relaxation>)
   Dual Bound       : +1.63845998006722e+03
   Gap              :       0.00 %
 Integrals          :      Total       Avg%
-  primal-dual      :       3.66      97.72
+  primal-dual      :       0.60      97.60
   primal-ref       :          -          - (not evaluated)
   dual-ref         :          -          - (not evaluated)
