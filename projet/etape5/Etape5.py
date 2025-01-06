@@ -13,11 +13,7 @@ def extract_objective_value(file_path):
                     return float(match.group())
     return None
 
-# Chemin vers libtbbmalloc2
-tbb_path = '/usr/lib/x86_64-linux-gnu/'
 
-# LD_LIBRARY_PATH
-os.environ['LD_LIBRARY_PATH'] = f"{tbb_path}:{os.environ.get('LD_LIBRARY_PATH', '')}"
 
 contenuFichierZIMPL = """
   set V     :=  {1..num_villes};
@@ -43,5 +39,5 @@ for num_villes in range(6, 20):
     fichier_zpl = f'projet/etape5/town{num_villes}.zpl'
     with open(fichier_zpl, 'w') as f:
         f.write(contenuFichierZIMPL.replace("num_villes", str(num_villes)))
-    os.system(f'projet/solvers/SCIP/bin/scip -f {fichier_zpl} > projet/etape5/log{num_villes}')
+    os.system(f'projet/solvers/bin/scip -f {fichier_zpl} > projet/etape5/log{num_villes}')
     print("Pour ",num_villes," villes  \t",extract_objective_value(f'projet/etape5/log{num_villes}'))
