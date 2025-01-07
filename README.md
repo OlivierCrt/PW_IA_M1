@@ -15,7 +15,7 @@ Si vous n'avez pas encore installé les dépendances nécessaires, vous pouvez l
 Faire attention pour l'étape 5 la lib SCIP change en fonction de l'OS je suis personnellement sous ubuntu 24.04
 ```bash
 Executer le script SCIPOptSuite-9.2.0-Linux-ubuntu24.sh troiuvable sur le site de SCIP
-Il faut pour l'executer:
+Il faut pour l executer:
 
   gcc
   g++
